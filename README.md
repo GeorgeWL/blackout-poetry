@@ -1,6 +1,29 @@
+
 # blackout-poetry
 
-This template should help get you started developing with Vue 3 in Vite.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9b2d8261-d292-4c82-be32-a1ef0bf0d461/deploy-status)](https://app.netlify.com/sites/leafy-platypus-8587f4/deploys)
+
+Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(artform)) in the web
+
+## Goals
+
+- [ ] Create a simple version
+  - User can input text
+  - User can select text to be erased - buttons
+  - Shows in UI the output
+- [ ] Select though highlight
+  - Figure out a UI for this
+  - Should be able to highlight to blackout the text
+- [ ] Add fetch for "Random Text"
+  - User can now choose between "Random Text" and "Input my own"
+
+## Possible Future Development
+
+- [ ] Improve UI
+- [ ] Print button
+- [ ] Option to edit? Feels out of the spirit of it
+
+# Development
 
 ## Recommended IDE Setup
 
@@ -44,4 +67,3 @@ npm run build
 ```sh
 npm run lint
 ```
-# blackout-poetry
