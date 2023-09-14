@@ -4,8 +4,8 @@ const value = ref('')
 defineProps<{
   placeholder: string
   id: string
-  rows?: number
-  cols?: number
+  rows?: string
+  cols?: string
 }>()
 function onClear() {
   value.value = ''
@@ -14,7 +14,7 @@ function onClear() {
 <template>
   <textarea
     :rows="rows || 5"
-    :cols="(cols as number).toFixed(2) || 30"
+    :cols="cols || 30"
     :placeholder="placeholder"
     :id="id"
     v-model="value"
