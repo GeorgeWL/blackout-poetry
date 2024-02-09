@@ -1,12 +1,10 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
-</script>
+
 
 <template>
   <div class="header">
-    <h1>{{ msg }}</h1>
+    <h1>
+      <slot />
+    </h1>
   </div>
 </template>
 

@@ -21,10 +21,15 @@ body {
 
 a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: var(--color-text-contrast);
   transition: 0.4s;
 }
 
+section h2 {
+  padding-bottom: 0.25em;
+  margin-bottom: 1em;
+  border-bottom: var(--color-border) 1px solid;
+}
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
