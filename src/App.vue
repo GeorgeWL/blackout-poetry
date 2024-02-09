@@ -1,16 +1,20 @@
 <script setup lang="ts">
+import HighlightInput from './components/HighlightInput.vue';
+import PreviewOutput from './components/PreviewOutput.vue';
 import PageHeader from './components/PageHeader.vue'
-import TextForm from './components/TextForm.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <PageHeader msg="You did it!" />
-    </div>
-  </header>
-  <main>
-    <TextForm />
+      <header>
+        <PageHeader msg="You did it!" />
+    </header>
+    <main>
+      <section>
+        <HighlightInput />
+      </section>
+      <section>
+        <PreviewOutput />
+      </section>
   </main>
 </template>
 
@@ -18,9 +22,27 @@ import TextForm from './components/TextForm.vue'
 header {
   line-height: 1.5;
 }
-fieldset {
-  border: none;
-  outline: none;
+
+main {
+  display: flex;
+  flex-direction: row;
+  place-items: flex-start;
+  align-items: center;
+  text-align: left;
+  gap: var(--column-gap);
+}
+
+section {
+  padding-left: var(--column-gap);
+}
+section > h2 {
+  padding-bottom: var(--column-gap);
+
+}
+
+section:first-child {
+  padding-right: var(--column-gap);
+  border-right: var(--color-text) 1px solid;
 }
 
 @media (min-width: 1024px) {

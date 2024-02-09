@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <div class="header">
-    <h1 class="green">{{ msg }}</h1>
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   .header h1,
   .header h3 {
     text-align: left;
