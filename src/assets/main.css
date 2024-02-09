@@ -6,10 +6,20 @@
   padding: 2rem;
 
   font-weight: normal;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+body {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+  background-color: var(--color-background-soft);
 }
 
-a,
-.green {
+a {
   text-decoration: none;
   color: hsla(160, 100%, 37%, 1);
   transition: 0.4s;
@@ -29,7 +39,8 @@ a,
 
   #app {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% 1fr;
     padding: 0 2rem;
   }
 }
