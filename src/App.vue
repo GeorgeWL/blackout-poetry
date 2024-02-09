@@ -5,16 +5,16 @@ import PageHeader from './components/PageHeader.vue'
 </script>
 
 <template>
-      <header>
-        <PageHeader msg="You did it!" />
-    </header>
-    <main>
-      <section>
-        <HighlightInput />
-      </section>
-      <section>
-        <PreviewOutput />
-      </section>
+  <header>
+    <PageHeader>Blackout Poetry</PageHeader>
+  </header>
+  <main>
+    <section>
+      <HighlightInput />
+    </section>
+    <section>
+      <PreviewOutput />
+    </section>
   </main>
 </template>
 
@@ -35,14 +35,10 @@ main {
 section {
   padding-left: var(--column-gap);
 }
-section > h2 {
-  padding-bottom: var(--column-gap);
-
-}
 
 section:first-child {
   padding-right: var(--column-gap);
-  border-right: var(--color-text) 1px solid;
+  border-right: var(--color-border) 1px solid;
 }
 
 @media (min-width: 1024px) {
