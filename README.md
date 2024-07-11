@@ -9,11 +9,12 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 
 - [ ] Create a simple version
   - User can input text
-  - User can select text to be erased - buttons
+  - User can select words to be erased - buttons
   - Shows in UI the output
-- [ ] Select though highlight
+- [ ] Select through highlight
   - Figure out a UI for this
   - Should be able to highlight to blackout the text
+  - should now allow partial selections, rather than only full words
 - [ ] Add fetch for "Random Text"
   - User can now choose between "Random Text" and "Input my own"
 
