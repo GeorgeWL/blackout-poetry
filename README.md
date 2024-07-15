@@ -8,15 +8,16 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 ## Goals
 
 - [ ] Create a simple version
-  - [ ] User can input text
   - [ ] User can select words to be erased - buttons
   - [ ] Shows in UI the output
+  - [ ] User can input text
+- [ ] Add fetch for "Random Text"
+  - [ ] User can now choose between "Random Text" and "Input my own"
 - [ ] Select through highlight
   - [ ] Figure out a UI for this
   - [ ] Should be able to highlight to blackout the text
   - [ ] Should now allow partial selections, rather than only full words
-- [ ] Add fetch for "Random Text"
-  - [ ] User can now choose between "Random Text" and "Input my own"
+
 
 ## Possible Future Development
 
@@ -34,13 +35,6 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 ## Type Support for `.vue` Imports in TS
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. 
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
 
 ## Customize configuration
 
