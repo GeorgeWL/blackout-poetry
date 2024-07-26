@@ -49,3 +49,25 @@ section h2 {
     padding: 0 2rem;
   }
 }
+.text-block {
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+.unstyled-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.unstyled-list li button,
+.unstyled-list li span {
+  background: none;
+  color: inherit;
+  border-color: var(--color-text);
+  margin: 0.25rem;
+}
+
+.empty-text {
+  opacity: 0.25;
+}
