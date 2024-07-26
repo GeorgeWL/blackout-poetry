@@ -1,13 +1,11 @@
 
 <template>
-    <p>
-        <slot />
-    </p>
+    <div class="text-block">
+        <slot>
+            <span class="empty-text">
+                No text provided
+            </span>
+        </slot>
+    </div>
 </template>
 
-<style scoped>
-p {
-    padding: 0 1rem;
-    border-radius: 5px;
-}
-</style>
