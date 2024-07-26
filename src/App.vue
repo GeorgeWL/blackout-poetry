@@ -7,11 +7,11 @@ import PreviewOutput from './components/PreviewOutput.vue';
 const defaultText = 'Hello, world! This is a test. It includes a few words. Some repeated words are test, test, test.'
 const wordsArray = ref<BlackoutWord[]>(defaultText.split(' ').map((word, index) => ({ id: index.toString(), label: word })));
 const markWordAsBlackout = (id: string) => {
-  // from the wordsArray, find the word that matches the id passed in and set it's attribute to blackedOut
-  const word = wordsArray.value.find((word) => word.id === id);
-  if (word) {
-    word.disabled = !word.disabled;
-  };
+  const words = wordsArray.value;
+  // for now just set same value
+  wordsArray.value = words;
+  // TODO: Find the word in the array and toggle the disabled property for that word
+  // NOTE: Want to guarantee array order is maintained, may be better to change to a Map or Set
   // put the word back in the array
 }
 </script>
