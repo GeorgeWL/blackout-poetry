@@ -1,7 +1,19 @@
 <script setup lang="ts">
-import HighlightInput from './components/HighlightInput.vue';
+import type { BlackoutWord } from '@/types';
+import { ref } from 'vue';
+import ButtonWordsInput from './components/ButtonWordsInput.vue';
+import PageHeader from './components/PageHeader.vue';
 import PreviewOutput from './components/PreviewOutput.vue';
-import PageHeader from './components/PageHeader.vue'
+const defaultText = 'Hello, world! This is a test. It includes a few words. Some repeated words are test, test, test.'
+const wordsArray = ref<BlackoutWord[]>(defaultText.split(' ').map((word, index) => ({ id: index.toString(), label: word })));
+const markWordAsBlackout = (id: string) => {
+  // from the wordsArray, find the word that matches the id passed in and set it's attribute to blackedOut
+  const word = wordsArray.value.find((word) => word.id === id);
+  if (word) {
+    word.disabled = !word.disabled;
+  };
+  // put the word back in the array
+}
 </script>
 
 <template>
@@ -10,10 +22,10 @@ import PageHeader from './components/PageHeader.vue'
   </header>
   <main>
     <section>
-      <HighlightInput />
+      <ButtonWordsInput @remove-word="markWordAsBlackout" :words-array="wordsArray" />
     </section>
     <section>
-      <PreviewOutput />
+      <PreviewOutput :words-array="wordsArray" />
     </section>
   </main>
 </template>
