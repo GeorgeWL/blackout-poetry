@@ -13,9 +13,6 @@ const markWordAsBlackout = (id: string) => {
   // for now just set same value
   words.find((word) => word.id === id)!.disabled = !words.find((word) => word.id === id)!.disabled
   wordsArray.value = words
-  // TODO: Find the word in the array and toggle the disabled property for that word
-  // NOTE: Want to guarantee array order is maintained, may be better to change to a Map or Set
-  // put the word back in the array
 }
 </script>
 
