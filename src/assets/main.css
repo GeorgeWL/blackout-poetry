@@ -85,11 +85,15 @@ button:active {
   background: var(--color-text);
   transform: scale(1.05);
   opacity: 1;
+    text-decoration-thickness: 0;
+
 }
 
 .blackout {
   border-color: transparent;
-  opacity: 0;
+  /* opacity: 0; */
+  background: none;
+  color: var(--color-text);
   text-decoration-line: line-through;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 100%;
 }
