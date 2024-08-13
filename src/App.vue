@@ -21,7 +21,7 @@ const markWordAsBlackout = (id: string) => {
   </header>
   <main>
     <section>
-      <h2>Click words to remove</h2>
+      <h2>Click words to add/remove</h2>
       <ButtonWordsInput @remove-word="markWordAsBlackout" :words-array="wordsArray" />
     </section>
   </main>

@@ -72,20 +72,24 @@ section h2 {
 }
 
 button {
-  color: inherit;
-  border-color: var(--color-text);
-  background: none;
+  border: none;
+  background: var(--color-text);
+  
+  color: var(--color-background-soft);
+  transition: all ease .5s;
 }
 
-button:hover,button:active {
-  background: var(--color-text);
+button:hover,
+button:active {
   color: var(--color-background-soft);
+  background: var(--color-text);
+  transform: scale(1.05);
+  opacity: 1;
 }
 
 .blackout {
-  background: var(--color-background-soft);
-  opacity: .25;
   border-color: transparent;
+  opacity: 0;
   text-decoration-line: line-through;
+  text-decoration-thickness: 3px;
 }
-
