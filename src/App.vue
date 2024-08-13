@@ -10,7 +10,6 @@ const wordsArray = ref<BlackoutWord[]>(
 )
 const markWordAsBlackout = (id: string) => {
   const words = wordsArray.value
-  // for now just set same value
   words.find((word) => word.id === id)!.disabled = !words.find((word) => word.id === id)!.disabled
   wordsArray.value = words
 }
