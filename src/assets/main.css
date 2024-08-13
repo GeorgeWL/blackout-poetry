@@ -74,7 +74,7 @@ section h2 {
 button {
   border: none;
   background: var(--color-text);
-  
+  cursor: pointer;
   color: var(--color-background-soft);
   transition: all ease .5s;
 }
