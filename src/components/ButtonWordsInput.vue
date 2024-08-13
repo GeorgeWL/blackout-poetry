@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { defineProps, defineEmits } from 'vue';
 import type { BlackoutWord } from '@/types';
 
 const emit = defineEmits(['removeWord']);
 
-const props = defineProps<{ wordsArray: BlackoutWord[] }>();
+const props = defineProps<{
+  wordsArray: BlackoutWord[];
+}>();
 </script>
 
 <template>
