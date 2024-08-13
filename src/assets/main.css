@@ -58,16 +58,34 @@ section h2 {
   padding: 0;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.unstyled-list li button,
-.unstyled-list li span {
-  background: none;
+.unstyled-list li {
   color: inherit;
-  border-color: var(--color-text);
+  background: none;
   margin: 0.25rem;
 }
 
 .empty-text {
   opacity: 0.25;
 }
+
+button {
+  color: inherit;
+  border-color: var(--color-text);
+  background: none;
+}
+
+button:hover,button:active {
+  background: var(--color-text);
+  color: var(--color-background-soft);
+}
+
+.blackout {
+  background: var(--color-background-soft);
+  opacity: .25;
+  border-color: transparent;
+  text-decoration-line: line-through;
+}
+
