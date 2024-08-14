@@ -26,8 +26,8 @@
   --color-heading: var(--vt-c-text-dark-1);
   --color-text: var(--vt-c-text-dark-1);
   --color-text-contrast: var(--vt-c-text-dark-2);
-  --section-gap: 160px;
-  --column-gap: 10px;
+  --section-gap: 24px;
+  --column-gap: 12px;
 }
 
 
