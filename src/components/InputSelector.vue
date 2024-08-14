@@ -41,6 +41,7 @@ async function getRandomText() {
   if (data.length) {
     console.log(JSON.stringify(data))
     const randomBook = data[Math.floor(Math.random() * data.length)]
+    console.log(randomBook.textUrl)
     const bookResponse = await fetch(randomBook.textUrl)
     console.log(bookResponse)
     const bookText = await bookResponse
