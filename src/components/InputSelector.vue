@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { mainStore } from '@/stores/mainStore';
-import type { BookDetail, GutenbergResponse } from '@/types';
-import { ref } from 'vue';
+import { mainStore } from '@/stores/mainStore'
+import type { BookDetail, GutenbergResponse } from '@/types'
+import { ref } from 'vue'
 const corpusAuthors: string[] = [
   'austen',
   'bible',
@@ -18,36 +18,45 @@ const corpusAuthors: string[] = [
 ]
 const currentText = ref(mainStore.text)
 const inputType = ref<'random' | 'manual'>('manual')
-
+const errorMsg = ref<string | undefined>()
 async function getRandomText() {
-  const randomAuthor = corpusAuthors[Math.floor(Math.random() * corpusAuthors.length)]
-  const response = await fetch(
-    `https://gutendex.com/books?mime_type=text/plain&search=${randomAuthor}`
-  )
-  const unParsedData: GutenbergResponse = await response.json()
-  const data = unParsedData.results.map(
-    (book): BookDetail => ({
-      authors: book.authors.map((author) => ({
-        birthYear: author.birth_year,
-        deathYear: author.death_year,
-        name: author.name
-      })),
-      title: book.title,
-      id: book.id,
-      textUrl: book.formats['text/plain; charset=utf-8'],
-    })
-  )
-  console.log(data)
-  if (data.length) {
-    console.log(JSON.stringify(data))
-    const randomBook = data[Math.floor(Math.random() * data.length)]
-    console.log(randomBook.textUrl)
-    const bookResponse = await fetch(randomBook.textUrl)
-    console.log(bookResponse)
-    const bookText = await bookResponse
-    console.log(bookText)
-    // mainStore.changeText(data)
-    // currentText.value = data
+  try {
+    const randomAuthor = corpusAuthors[Math.floor(Math.random() * corpusAuthors.length)]
+    const response = await fetch(
+      `https://gutendex.com/books?mime_type=text/plain&search=${randomAuthor}`
+    )
+    const unParsedData: GutenbergResponse = await response.json()
+    const data = unParsedData.results
+      .map(
+        (book): BookDetail => ({
+          authors: book.authors.map((author) => ({
+            birthYear: author.birth_year,
+            deathYear: author.death_year,
+            name: author.name
+          })),
+          title: book.title,
+          id: book.id,
+          textUrl: book.formats['text/plain; charset=utf-8']
+        })
+      )
+      .filter((book) => book.textUrl)
+    console.log(data)
+    if (data.length) {
+      console.log({ data, unParsedData }, 'data')
+      const randomBook = data[Math.floor(Math.random() * data.length - 1)]
+      console.log(randomBook)
+      const bookResponse = await fetch(randomBook.textUrl)
+      console.log(bookResponse)
+      const bookText = await bookResponse.text()
+      const finalText = await bookText
+      console.log(bookText, finalText)
+
+      // mainStore.changeText(data)
+      // currentText.value = data
+    }
+  } catch (error) {
+    console.error(error)
+    errorMsg.value = (error as Error).message
   }
 }
 </script>
