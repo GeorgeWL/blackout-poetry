@@ -8,8 +8,8 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 ## Goals
 
 - [ ] Create a simple version
-  - [ ] User can select words to be erased - buttons
-  - [ ] Shows in UI the output
+  - [X] User can select words to be erased - buttons
+  - [X] Shows in UI the output
   - [ ] User can input plain unformatted text
 - [ ] Add fetch for "Random Text"
   - [ ] User can now choose between "Random Text" and "Input my own"
