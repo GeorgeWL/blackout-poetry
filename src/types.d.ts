@@ -22,7 +22,7 @@ type GutenbergAuthor = {
   birth_year: number
   death_year: number | null
 }
-export type GutenbergResponse = {
+export type GutendexResponse = {
   count: number
   next: string | null
   previous: string | null
