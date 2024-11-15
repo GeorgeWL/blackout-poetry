@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import type { BookDetail } from '@/types'
+import type { BookDetail } from '@/types';
 
 const props = defineProps<{ value: BookDetail }>()
+const getBookText = (textUrl: string) => {
+    console.log('Getting text for book with url:', textUrl)
+}
 </script>
 <template>
   <li class="book">
@@ -18,5 +21,6 @@ const props = defineProps<{ value: BookDetail }>()
       <strong> Bookshelves: </strong>
       {{ props.value.bookshelves.join(', ') }}
     </p>
+    <button @click="()=>getBookText(props.value.textUrl)">Set Text to Random Page</button>
   </li>
 </template>
