@@ -5,7 +5,9 @@ import PageHeader from './components/PageHeader.vue'
 import { mainStore } from './stores/mainStore'
 const toggleWordAsBlackout = (id: string) => {
   const cachedWords = mainStore.wordsArray
-  cachedWords.find((word) => word.id === id)!.disabled = !cachedWords.find((word) => word.id === id)!.disabled
+  cachedWords.find((word) => word.id === id)!.disabled = !cachedWords.find(
+    (word) => word.id === id
+  )!.disabled
   mainStore.setWordsArray(cachedWords)
 }
 </script>
@@ -29,6 +31,16 @@ const toggleWordAsBlackout = (id: string) => {
         * Book search books are taken from Project Gutenberg, so are only books that are in the
         public domain.
       </small>
+    </p>
+    <p>
+      Default text taken from
+      <a
+        href="https://en.wikipedia.org/wiki/Erasure_poetry"
+        target="_blank"
+        referrerpolicy="no-referrer"
+      >
+        Wikipedia</a
+      >
     </p>
   </footer>
 </template>

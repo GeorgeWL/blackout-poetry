@@ -6,7 +6,9 @@ export const defaultText = `Erasure poetry, or blackout poetry, is a form of fou
 
 Writers and visual artists have adopted this form both to achieve a range of cognitive or symbolic effects and to focus on the social or political meanings of erasure. Erasure is a way to give an existing piece of writing a new set of meanings, questions, or suggestions. It lessens the trace of authorship but also draws attention to the original text. Doris Cross appears to have been among the earliest to utilize this technique, beginning in 1965 with her "Dictionary Columns" book art.
 
-The poetic form gained new political purpose online in 2017. In response to the Trump administration's travel ban, poets and writers began creating erasure poems from the executive order itself. The erasure form allowed writers to transform the order into a statement of resistance. The tradition of concrete poetry and the works of visual artists such as d.a. levy have some relationship to this artform.
+The poetic form gained new political purpose online in 2017, in response to the Trump administration. 
+
+The tradition of concrete poetry and the works of visual artists such as d.a. levy have some relationship to this artform.
 
 - Wikipedia on Erasure Poetry
 `

@@ -15,12 +15,21 @@
 header,
 main,
 footer {
-  position: relative;
   padding: 1rem 0;
   color: var(--color-text-contrast);
   width: 100%;
 }
-
+header,footer{
+  position: fixed;
+  left: 10%;
+  background-color: var(--color-background-soft);
+}
+header {
+  top: 0;
+}
+footer {
+  bottom: 0;
+}
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   margin: 0;
@@ -71,7 +80,7 @@ section h2 {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  max-height: 25vh;
+  max-height: 33vh;
   overflow-y: auto;
 }
 
