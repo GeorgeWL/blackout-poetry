@@ -22,6 +22,7 @@ export async function getGutendexSearch(search: string): Promise<BookDetail[]> {
         })
       )
       .filter((book) => book.textUrl)
+      .sort((a, b) => b.downloadCount - a.downloadCount)
 
     if (data.length > 0) {
       return data
