@@ -119,8 +119,7 @@ button[type='reset']:disabled {
   opacity: 0.5;
 }
 
-button:hover,
-button:active {
+button:hover{
   color: var(--color-background-soft);
   background: var(--color-text);
   transform: scale(1.05);
