@@ -30,7 +30,7 @@ const resetText = () => {
     <div class="flex flex-row">
       <button type="submit" @click="saveText">Save</button>
       <button type="reset" @click="cacheText = ''">Clear</button>
-      <button type="reset" @click="resetText">Reset</button>
+      <button type="reset" @click="resetText">Reset to Default</button>
     </div>
   </div>
 </template>
