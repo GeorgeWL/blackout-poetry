@@ -18,7 +18,8 @@ footer {
   padding: 1rem 0;
   width: 100%;
 }
-header,footer{
+header,
+footer {
   position: fixed;
   left: 10%;
   color: var(--color-text-contrast);
@@ -39,7 +40,7 @@ body {
 }
 
 a {
-  text-decoration:underline;
+  text-decoration: underline;
   border-bottom: 2px solid var(--color-border);
   color: var(--color-text-contrast);
   transition: 0.4s;
@@ -119,7 +120,7 @@ button[type='reset']:disabled {
   opacity: 0.5;
 }
 
-button:hover{
+button:hover {
   color: var(--color-background-soft);
   background: var(--color-text);
   transform: scale(1.05);
@@ -188,4 +189,9 @@ h6 {
 }
 input[type='radio'] {
   margin-right: 0.25rem;
+}
+label,
+textarea,
+input {
+  margin: 0.25rem;
 }
