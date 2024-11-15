@@ -48,7 +48,8 @@ export type GutendexBook = {
   download_count: number
 }
 
-export type BookDetail = Pick<GutendexBook, 'id' | 'title' | 'bookshelves'> & {
+export type BookDetail = Pick<GutendexBook, 'title' | 'bookshelves'> & {
+  id: string
   authors: AuthorDetail[]
   textUrl: string
   downloadCount: number
