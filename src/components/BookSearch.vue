@@ -27,14 +27,21 @@ const getSearchResults = async () => {
 
 <template>
   <div>
-    <input type="text" v-model="currentSearch" />
+    <input
+      type="text"
+      v-model="currentSearch"
+      placeholder="Search for books"
+    />
     <button
       type="submit"
       :disabled="isLoading === true || error?.length > 0"
       @click="getSearchResults()"
     >
-      Search for books
+      Search for books 
     </button>
+    <small>
+      (default if no search is top 10 downloads)
+    </small>
     <p v-if="isLoading">
       <strong>Loading...</strong>
     </p>
