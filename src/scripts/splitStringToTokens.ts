@@ -8,8 +8,9 @@ export default function splitStringToTokens(text: string): BlackoutWord[] {
       .replace(/[“”]/g, '"')
       .replace(/[‘’]/g, "'")
       .replace(/_/g, '')
+      .replace(/\r/g, '\n')
       // split on spaces, newlines, and punctuation
-      .split(/([,"'; \n])/g)
+      .split(/([,?"; \n()!])/g)
       // remove empty strings
       .filter((w) => [' ', ''].includes(w) === false)
       // map to BlackoutWord objects

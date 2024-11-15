@@ -15,7 +15,7 @@ export async function getGutendexSearch(search: string): Promise<BookDetail[]> {
             name: author.name
           })),
           title: book.title,
-          id: book.id,
+          id: String(book.id),
           textUrl: book.formats['text/plain; charset=utf-8'],
           bookshelves: book.bookshelves,
           downloadCount: book.download_count
