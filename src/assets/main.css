@@ -39,7 +39,8 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration:underline;
+  border-bottom: 2px solid var(--color-border);
   color: var(--color-text-contrast);
   transition: 0.4s;
 }
