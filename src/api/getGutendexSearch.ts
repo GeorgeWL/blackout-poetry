@@ -1,4 +1,5 @@
 import type { BookDetail, GutendexResponse } from '@/types'
+import md5 from 'md5'
 
 export async function getGutendexSearch(search: string): Promise<BookDetail[]> {
   try {
@@ -8,13 +9,16 @@ export async function getGutendexSearch(search: string): Promise<BookDetail[]> {
       .map(
         (book): BookDetail => ({
           authors: book.authors.map((author) => ({
+            id: md5(JSON.stringify(author)),
             birthYear: author.birth_year,
             deathYear: author.death_year,
             name: author.name
           })),
           title: book.title,
           id: book.id,
-          textUrl: book.formats['text/plain; charset=utf-8']
+          textUrl: book.formats['text/plain; charset=utf-8'],
+          bookshelves: book.bookshelves,
+          downloadCount: book.download_count
         })
       )
       .filter((book) => book.textUrl)
