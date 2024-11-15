@@ -7,7 +7,7 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 
 ## Goals
 
-- [ ] Create a simple version
+- [X] Create a simple version
   - [X] User can select words to be erased - buttons
   - [X] Shows in UI the output
   - [X] User can input plain unformatted text
