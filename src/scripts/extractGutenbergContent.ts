@@ -2,7 +2,7 @@ import splitStringToTokens from './splitStringToTokens'
 
 export function getRandomPage(bookTokens: string[]) {
   // Split the book into "pages" or sections based on a number of lines
-  const pageSize = 300
+  const pageSize = 500
   const pages = []
 
   for (let i = 0; i < bookTokens.length; i += pageSize) {

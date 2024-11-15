@@ -27,6 +27,10 @@ type MainStore = {
 export const mainStore = reactive<MainStore>({
   text: defaultText,
   setText(newText: string) {
+    if (newText === '') {
+      console.error('use clearText() instead of setting text to an empty string')
+      return
+    }
     this.text = newText
     this.wordsArray = splitStringToTokens(newText)
   },
