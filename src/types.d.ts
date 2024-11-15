@@ -1,6 +1,7 @@
 export type BlackoutWord = { id: string; label: string; disabled?: boolean }
 
 type AuthorDetail = {
+  id: string
   name: string
   birthYear: number
   deathYear: number | null
@@ -26,9 +27,9 @@ export type GutendexResponse = {
   count: number
   next: string | null
   previous: string | null
-  results: GutenbergBook[]
+  results: GutendexBook[]
 }
-export type GutenbergBook = {
+export type GutendexBook = {
   id: number
   title: string
   authors: GutenbergAuthor[]
@@ -41,11 +42,9 @@ export type GutenbergBook = {
   formats: { [key in Formats]: string }
   download_count: number
 }
-export type GutenbergBook = {}
 
-export type BookDetail = {
-  id: number
-  title: string
+export type BookDetail = Pick<GutendexBook, 'id' | 'title' | 'bookshelves'> & {
   authors: AuthorDetail[]
   textUrl: string
+  downloadCount: number
 }
