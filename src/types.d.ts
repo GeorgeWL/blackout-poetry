@@ -1,4 +1,9 @@
-export type BlackoutWord = { id: string; label: string; disabled?: boolean }
+export type BlackoutWord = {
+  id: string
+  label: string
+  disabled?: boolean
+  isNewLine?: boolean
+}
 
 type AuthorDetail = {
   id: string

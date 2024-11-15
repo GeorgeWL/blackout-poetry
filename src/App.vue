@@ -1,20 +1,12 @@
 <script setup lang="ts">
-import type { BlackoutWord } from '@/types'
-import { computed, ref } from 'vue'
 import ButtonWordsInput from './components/ButtonWordsInput.vue'
+import InputSelector from './components/InputSelector.vue'
 import PageHeader from './components/PageHeader.vue'
 import { mainStore } from './stores/mainStore'
-import InputSelector from './components/InputSelector.vue'
-
-const text = mainStore.text
-const wordsArray = computed<BlackoutWord[]>(() =>
-  text.split(' ').map((word, index) => ({ id: index.toString(), label: word }))
-)
-const arrayRef = ref(wordsArray.value)
-const markWordAsBlackout = (id: string) => {
-  const words = arrayRef.value
-  words.find((word) => word.id === id)!.disabled = !words.find((word) => word.id === id)!.disabled
-  arrayRef.value = words
+const toggleWordAsBlackout = (id: string) => {
+  const cachedWords = mainStore.wordsArray
+  cachedWords.find((word) => word.id === id)!.disabled = !cachedWords.find((word) => word.id === id)!.disabled
+  mainStore.setWordsArray(cachedWords)
 }
 </script>
 
@@ -28,9 +20,17 @@ const markWordAsBlackout = (id: string) => {
     </section>
     <section>
       <h2>Click words to add/remove</h2>
-      <ButtonWordsInput @remove-word="markWordAsBlackout" :words-array="arrayRef" />
+      <ButtonWordsInput @toggle-word="toggleWordAsBlackout" :words-array="mainStore.wordsArray" />
     </section>
   </main>
+  <footer>
+    <p>
+      <small>
+        * Book search books are taken from Project Gutenberg, so are only books that are in the
+        public domain.
+      </small>
+    </p>
+  </footer>
 </template>
 
 <style>
@@ -59,7 +59,6 @@ section {
   border-top: var(--color-border) 1px solid;
   align-items: flex-start;
 }
-
 
 @media (min-width: 1024px) {
   header {
