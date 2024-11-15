@@ -26,7 +26,7 @@ const resetText = () => {
     <BookSearch />
   </div>
   <div v-if="inputType === 'manual'" class="flex-col">
-    <textarea for="submit-manual" placeholder="Type your text here" v-model="cacheText" cols="100" rows="10"></textarea>
+    <textarea for="submit-manual" placeholder="Type your text here" v-model="cacheText" cols="1" rows="1"></textarea>
     <div class="flex flex-row">
       <button type="submit" id="submit-manual" @click="saveText">Save</button>
       <button type="reset" @click="cacheText = ''">Clear</button>
