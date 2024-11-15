@@ -10,13 +10,9 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 - [ ] Create a simple version
   - [X] User can select words to be erased - buttons
   - [X] Shows in UI the output
-  - [ ] User can input plain unformatted text
+  - [X] User can input plain unformatted text
 - [ ] Add fetch for "Random Text"
   - [ ] User can now choose between "Random Text" and "Input my own"
-- [ ] Select through highlight
-  - [ ] Figure out a UI for this
-  - [ ] Should be able to highlight to blackout the text
-  - [ ] Should now allow partial selections, rather than only full words
 
 ## Possible Future Development
 
@@ -25,6 +21,10 @@ Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(a
 - [ ] Option to edit? Feels out of the spirit of it
 - [ ] Option to filter "Random Text" by category/theme
 - [ ] Formatted Text instead of plain text
+- [ ] Select through highlight
+  - [ ] Figure out a UI for this
+  - [ ] Should be able to highlight to blackout the text
+  - [ ] Should now allow partial selections, rather than only full words
 
 # Development
 
