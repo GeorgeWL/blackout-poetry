@@ -143,11 +143,10 @@ button:hover {
 
 .blackout {
   border-color: transparent;
-  /* opacity: 0; */
-  background: none;
-  color: var(--color-text);
+  opacity: 0.5;
+  /* color: var(--color-text-background-soft); */
   text-decoration-line: line-through;
-  text-decoration-thickness: 100%;
+  text-decoration-thickness: 33%;
 }
 
 h1,
