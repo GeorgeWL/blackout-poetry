@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { BlackoutWord } from '@/types'
-import { ref } from 'vue';
 
 const props = defineProps<{
   word: BlackoutWord
@@ -9,7 +8,21 @@ const props = defineProps<{
 }>()
 </script>
 <template>
-  <button v-if="!props.word.isNewLine" :class="{ blackout: props.word.disabled }" v-on:mouseout="()=>{if(props.mouseout)toggleWord(props.word.id)}" @click="toggleWord(props.word.id)">
+  <button
+    v-if="!props.word.isNewLine"
+    :class="{ blackout: props.word.disabled }"
+    v-on:touchend="
+      () => {
+        if (props.mouseout) toggleWord(props.word.id)
+      }
+    "
+    v-on:mouseout="
+      () => {
+        if (props.mouseout) toggleWord(props.word.id)
+      }
+    "
+    @click="toggleWord(props.word.id)"
+  >
     {{ props.word.label }}
   </button>
   <div v-else class="spacer" />
