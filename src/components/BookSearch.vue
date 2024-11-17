@@ -3,11 +3,13 @@ import { getGutendexSearch } from '@/api/getGutendexSearch'
 import { mainStore } from '@/stores/mainStore'
 import { ref } from 'vue'
 import SearchResult from './SearchResults.vue'
+import LoaderDisplay from './LoaderDisplay.vue'
 
 const currentSearch = ref('')
 const isLoading = ref(false)
 const error = ref('')
 const getSearchResults = async () => {
+  mainStore.setSearchResults([])
   isLoading.value = true
   try {
     const results = await getGutendexSearch(currentSearch.value)
@@ -26,30 +28,18 @@ const getSearchResults = async () => {
 </script>
 
 <template>
-  <div>
-    <input
-      type="text"
-      v-model="currentSearch"
-      placeholder="Search for books"
-    />
+  <form>
+    <input type="text" v-model="currentSearch" placeholder="Search for books" for="search-submit" />
     <button
+      id="search-submit"
       type="submit"
       :disabled="isLoading === true || error?.length > 0"
       @click="getSearchResults()"
     >
-      Search for books 
+      Search for books
     </button>
-    <small>
-      (default if no search is top 10 downloads)
-    </small>
-    <p v-if="isLoading">
-      <strong>Loading...</strong>
-    </p>
-    <p v-if="error.length > 0">
-      <strong>
-        {{ error }}
-      </strong>
-    </p>
+    <small> (default if no search is top 10 downloads) </small>
+    <LoaderDisplay :error="error" :is-loading="isLoading" />
     <SearchResult />
-  </div>
+  </form>
 </template>
