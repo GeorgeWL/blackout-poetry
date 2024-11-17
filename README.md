@@ -13,20 +13,20 @@ https://blackout.georgewl.dev
   - [X] User can select words to be erased - buttons
   - [X] Shows in UI the output
   - [X] User can input plain unformatted text
-- [ ] Add fetch for "Random Text"
-  - [ ] User can now choose between "Random Text" and "Input my own"
+- [X] Add fetch for "Search Text"
+  - User can now choose between "Search" and "Manual" 
+- [X] Add fetch for "Random Text"
+  - User can now choose between "Random", "Search" and "Manual"
 
 ## Possible Future Development
 
-- [ ] Improve UI
+- [ ] Save as Image button
+- [ ] Copy as Text button
+  - Should replace blackout words with ⬛
 - [ ] Print button
-- [ ] Option to edit? Feels out of the spirit of it
-- [ ] Option to filter "Random Text" by category/theme
+- [ ] Option to filter "Random" by category/theme
 - [ ] Formatted Text instead of plain text
-- [ ] Select through highlight
-  - [ ] Figure out a UI for this
-  - [ ] Should be able to highlight to blackout the text
-  - [ ] Should now allow partial selections, rather than only full words
+- [ ] Allow partial selections, rather than only full words
 
 # Development
 
