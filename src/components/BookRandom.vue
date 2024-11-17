@@ -33,7 +33,7 @@ const getRandomBook = async () => {
 
 <template>
   <div>
-    <button @click="getRandomBook">Get Random Book</button>
+    <button type="submit" @click="getRandomBook">Get Random Book</button>
     <LoaderDisplay :error="error" :is-loading="isLoading" />
     <SearchDisplay v-if="book" :book="book" />
   </div>
