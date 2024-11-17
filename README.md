@@ -5,6 +5,8 @@
 
 Pet Project to create [Blackout Poetry](https://en.wikipedia.org/wiki/Erasure_(artform)) in the web
 
+https://blackout.georgewl.dev
+
 ## Goals
 
 - [X] Create a simple version
