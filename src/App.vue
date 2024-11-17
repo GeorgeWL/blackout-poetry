@@ -28,8 +28,7 @@ const toggleWordAsBlackout = (id: string) => {
   <footer>
     <p>
       <small>
-        * Book search books are taken from Project Gutenberg, so are only books that are in the
-        public domain.
+        *Books are taken from Project Gutenberg, so are only books that are in the public domain.
       </small>
     </p>
     <p>
