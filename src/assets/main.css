@@ -3,34 +3,31 @@
 #app {
   width: 80vw;
   margin: 0 auto;
-  padding: 2rem;
-
+  padding: 0 2rem;
   font-weight: normal;
   align-content: center;
   justify-content: center;
   align-items: center;
   justify-items: center;
 }
-
+header {
+  font-weight: 500;
+  font-size: 1.6rem;
+  position: relative;
+}
 header,
 main,
 footer {
-  padding: 1rem 0;
   width: 100%;
+  padding-bottom: 1rem;
 }
 header,
 footer {
-  position: fixed;
-  left: 10%;
   color: var(--color-text-contrast);
   background-color: var(--color-background-soft);
+  text-align: center;
 }
-header {
-  top: 0;
-}
-footer {
-  bottom: 0;
-}
+
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   margin: 0;
@@ -45,22 +42,18 @@ a {
   color: var(--color-text-contrast);
   transition: 0.4s;
 }
-section{
+section {
   margin: 1rem 0;
   position: relative;
   width: 100%;
 }
 section h2 {
   padding-bottom: 0.25em;
-  margin-bottom: 1em;
   border-bottom: var(--color-border) 1px solid;
+  margin-bottom: 1em;
 }
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-textarea{
+
+textarea {
   position: relative;
   min-width: 70vw;
   margin: 0;
@@ -69,19 +62,6 @@ textarea{
   border-radius: 5px;
   border: var(--color-border) 1px solid;
   min-height: 10vh;
-}
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100% 1fr;
-    padding: 0 2rem;
-  }
 }
 
 .text-block {
@@ -95,7 +75,7 @@ textarea{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  max-height: 50vh;
+  max-height: 40vh;
   overflow-y: auto;
 }
 
@@ -155,6 +135,7 @@ h3,
 h4,
 h5,
 h6 {
+  position: relative;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   font-weight: 700;
   color: var(--color-text-contrast);
@@ -206,4 +187,50 @@ label,
 textarea,
 input {
   margin: 0.25rem;
+}
+
+@media (min-width: 1024px) {
+  header,
+  footer {
+    position: fixed;
+    width: 100vw;
+  }
+  header {
+    top: 0;
+  }
+  footer {
+    bottom: 0;
+  }
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100% 1fr;
+  }
+}
+@media (max-height: 805px) {
+  .unstyled-list {
+    max-height: 33vh;
+  }
+}
+@media (max-height: 605px) {
+  .unstyled-list {
+    max-height: 25vh;
+  }
+}
+@media (min-height: 1024px) {
+  .unstyled-list {
+    max-height: 50vh;
+  }
 }
