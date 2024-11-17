@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import ButtonWordsInput from './components/ButtonWordsInput.vue'
 import InputSelector from './components/InputSelector.vue'
-import PageHeader from './components/PageHeader.vue'
 import { mainStore } from './stores/mainStore'
+
 const toggleWordAsBlackout = (id: string) => {
   const cachedWords = mainStore.wordsArray
   cachedWords.find((word) => word.id === id)!.disabled = !cachedWords.find(
@@ -14,7 +14,7 @@ const toggleWordAsBlackout = (id: string) => {
 
 <template>
   <header>
-    <PageHeader>Blackout Poetry</PageHeader>
+    <h1>Blackout Poetry</h1>
   </header>
   <main>
     <section>
@@ -68,7 +68,6 @@ section {
   place-items: flex-start;
   padding: var(--section-gap) 0;
   width: 100%;
-  border-top: var(--color-border) 1px solid;
   align-items: flex-start;
 }
 
