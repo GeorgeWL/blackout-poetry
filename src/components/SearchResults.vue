@@ -16,7 +16,7 @@ const hidden = ref(false)
     />
   </div>
   <ul v-if="mainStore.searchResults.length > 0 && !hidden" class="unstyled-list">
-    <SearchResult v-for="result in mainStore.searchResults" :key="result.id" :value="result">
+    <SearchResult v-for="result in mainStore.searchResults" :key="result.id" :book="result">
       <strong>{{ result.title }}</strong> by {{ result.authors.join(', ') }}
     </SearchResult>
   </ul>
