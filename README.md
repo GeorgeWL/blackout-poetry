@@ -17,9 +17,10 @@ https://blackout.georgewl.dev
   - User can now choose between "Search" and "Manual" 
 - [X] Add fetch for "Random Text"
   - User can now choose between "Random", "Search" and "Manual"
+- [ ] "Toggle All" Button
+  - In many cases will want inverse, instead of toggling off each word, toggling on some of the words 
 
 ## Possible Future Development
-
 - [ ] Save as Image button
 - [ ] Copy as Text button
   - Should replace blackout words with ⬛
