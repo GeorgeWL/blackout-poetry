@@ -28,7 +28,6 @@ const getSearchResults = async () => {
 </script>
 
 <template>
-  <form>
     <input type="text" v-model="currentSearch" placeholder="Search for books" for="search-submit" />
     <button
       id="search-submit"
@@ -41,5 +40,4 @@ const getSearchResults = async () => {
     <small> (default if no search is top 10 downloads) </small>
     <LoaderDisplay :error="error" :is-loading="isLoading" />
     <SearchResult />
-  </form>
 </template>
