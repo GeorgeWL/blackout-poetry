@@ -23,7 +23,7 @@ https://blackout.georgewl.dev
 - [ ] "Toggle All" Button
   - In many cases will want inverse, instead of manually toggling off each word, toggling on some of the words 
 
-### Possible Future Development
+### Could-have
 - [ ] Save as Image button
 - [ ] Copy as Text button
   - Should replace blackout words with ⬛
